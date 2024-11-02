@@ -28,6 +28,7 @@ class Game:
         if self.commercialZones > 0:
             self.gears += 25 + ((25 * self.citizens) / 100)
         self.steam -= self.citizens // 10
+        self.expandZones()
        
     def addMilitaryZone(self) -> None:
         if (self.zones <= 0):
@@ -65,7 +66,6 @@ class Game:
         self.zone -= 1
         self.indesutrialZones += 1
 
-
     def expandZones(self) -> None:
         if self.expanded:
             return
@@ -73,8 +73,7 @@ class Game:
             self.zones += 16 # 25 - 9 zones leaves 16 zones untouched 
             self.expanded = True
 
-    def buyZone(self) -> None:
-        pass
+
 app = Flask(__name__)
 CORS(app)
 
@@ -84,6 +83,7 @@ def homepage():
 
 @app.route('/game')
 def game():
+    
     return render_template("game.html")
 
 @app.route('/story', methods=['GET'])
