@@ -1,8 +1,9 @@
 from flask import Flask, render_template, url_for, request, jsonify
 import requests
+
 class Game:
-    def __init__(self, day) -> None:      
-        self.day = 30 if day > 30 else day
+    def __init__(self, day) -> None:
+        self.day = day
         self.expand = False
         self.citizens = 0
         self.standing = 0 # One standing gives 10 percent
@@ -32,19 +33,8 @@ class Game:
             return
         self.zones -= 1
         self.militaryZones += 1
-        self.standing += 1
-    
-    def TakeOver(self) -> bool:
-        random = random.randint(1, 101)
-        percent = 75 if percent > 75 else 30 + self.standing * .1
-        if random < percent:
-            return True
-        return False    
 
-    def addResidentialZone(self) -> None:
-        self.zone -= 1
-        self.residentZones += 1
-        self.citizens += 5
+
         
 
 app = Flask(__name__)
