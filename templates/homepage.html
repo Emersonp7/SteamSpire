@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='Gear.png') }}">
 {% endblock %}
 
 {% block body %}
 <img src="{{ url_for('static', filename='logo.png') }}" alt="SteamSpire logo" width="700" height="700">
-<br>
 <br>
 <p>Welcome to SteamSpire, a city-builder game where you manage a Victorian-era Steampunk city. <br>
     Build industrial zones to increase your steam count, build commercial zones to increase your gear count, <br>
