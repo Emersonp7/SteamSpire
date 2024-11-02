@@ -34,9 +34,8 @@ class Game:
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-
-    return render_template('index.html')
+def homepage():
+    return render_template('homepage.html')
 
 @app.route('/game')
 def game():
