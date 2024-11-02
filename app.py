@@ -22,10 +22,13 @@ class Game:
     def endDay(self):
         self.day -= 1
         self.gears -= self.militaryZones * 10
-        self.updateResources()
+        if (self.citizens % 10 == 0):
+            self.steam -= 1
+        
+    
     
     def updateResources(self):
-        return None
+        
 
 
 app = Flask(__name__)
