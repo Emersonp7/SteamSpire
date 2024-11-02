@@ -5,7 +5,7 @@ class Game:
         self.day = 30 if day > 30 else day
         self.expand = False
         self.citizens = 0
-        self.standing = 0
+        self.standing = 0 # One standing gives 10 percent
 
         # Map Zones
         self.zones = 9
@@ -33,9 +33,18 @@ class Game:
         self.zones -= 1
         self.militaryZones += 1
         self.standing += 1
+    
+    def TakeOver(self) -> bool:
+        random = random.randint(1, 101)
+        percent = 75 if percent > 75 else 30 + self.standing * .1
+        if random < percent:
+            return True
+        return False    
 
-
-
+    def addResidentialZone(self) -> None:
+        self.zone -= 1
+        self.residentZones += 1
+        self.citizens += 5
         
 
 app = Flask(__name__)
