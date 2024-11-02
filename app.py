@@ -1,9 +1,8 @@
 from flask import Flask, render_template, url_for, request, jsonify
 import requests
-
 class Game:
-    def __init__(self, day) -> None:
-        self.day = day
+    def __init__(self, day) -> None:      
+        self.day = 30 if day > 30 else day
         self.expand = False
         self.citizens = 0
         self.standing = 0
@@ -33,6 +32,8 @@ class Game:
             return
         self.zones -= 1
         self.militaryZones += 1
+        self.standing += 1
+
 
 
         
