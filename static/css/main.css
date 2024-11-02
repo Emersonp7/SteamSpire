@@ -1,8 +1,22 @@
+html {
+    background-color: rgb(255, 199, 109);
+    background-image: url('Background.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5;
-    background-image: url('Background.png');
+}
+
+.welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
