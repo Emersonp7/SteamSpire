@@ -6,7 +6,7 @@ class Game:
         self.day = day
         self.expand = False
         self.citizens = 0
-        self.standing = 0
+        self.standing = 0 # One standing gives 10 percent
 
         # Map Zones
         self.zones = 9
