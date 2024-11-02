@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request, jsonify
+from flask_cors import CORS
 import requests
 
 class Game:
@@ -38,6 +39,7 @@ class Game:
         
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def homepage():
