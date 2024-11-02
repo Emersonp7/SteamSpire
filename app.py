@@ -36,7 +36,7 @@ class Game:
         self.militaryZones += 1
         self.standing += 1
     
-    def removeMilitrayZone(self) -> None:
+    def removeMilitaryZone(self) -> None:
         if self.militaryZones <= 0:
             return
 
@@ -63,7 +63,7 @@ class Game:
 
     def addIndustrialZone(self) -> None:
         self.zone -= 1
-        self.indesutrialZones += 1
+        self.industrialZones += 1
 
 
     def expandZones(self) -> None:
