@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request, jsonify
+from flask_cors import CORS
 import requests
 
 class Game:
@@ -6,7 +7,7 @@ class Game:
         self.day = day
         self.expand = False
         self.citizens = 0
-        self.standing = 0 # One standing gives 10 percent
+        self.standing = 0
 
         # Map Zones
         self.zones = 9
@@ -38,6 +39,7 @@ class Game:
         
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def homepage():
