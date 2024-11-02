@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, jsonify
+import requests
 
 class Game:
     def __init__(self, day) -> None:
@@ -42,6 +43,16 @@ def homepage():
 def game():
     return render_template("game.html")
 
+@app.route('/story', methods=['GET'])
+def story():
+    cloudflare_url = 'https://old-forest-7d72.go48.workers.dev/'
+    response = requests.get(cloudflare_url)
+
+    if response.status_code == 200:
+        story_data = response.json()
+        return jsonify(story_data)
+    else:
+        return jsonify({'error': 'Failed to fetch story from AI.'}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
