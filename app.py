@@ -24,13 +24,17 @@ class Game:
         self.gears -= self.militaryZones * 10
         if (self.citizens % 10 == 0):
             self.steam -= 1
-        
-    
-    
-    def updateResources(self):
-        pass
-        
+        self.gears += 25 + ((25 * self.citizens)/100)
 
+        
+    def addMilitaryZone(self) -> None:
+        if (self.zones <= 0):
+            return
+        self.zones -= 1
+        self.militaryZones += 1
+
+
+        
 
 app = Flask(__name__)
 
