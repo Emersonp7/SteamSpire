@@ -28,6 +28,7 @@ class Game:
     
     
     def updateResources(self):
+        pass
         
 
 
