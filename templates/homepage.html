@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<img src="logo.jpg" alt="SteamSpire logo" width="500" height="500">
+<img src="{{ url_for('static', filename='logo.jpg') }}" alt="SteamSpire logo" width="500" height="500">
 <h1>SteamSpire</h1>
 <p>Welcome to SteamSpire, a city-builder game where you manage a Victorian-era Steampunk city. Build industrial zones to increase your steam count, build commercial zones to increase your gear count, <br>
     and build residential zones to increase your population. The more citizens you have, the more gears you make. Use your gears to buy more land. <br>
