@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Gear.png') }}">
+{% endblock %}
+
+{% block body %}
+<div>
+    <h2>Player Information</h2>
+    <div class="leftside">
+        <p>Gears: [edit]</p>
+        <p>Steam: [edit]</p>
+        <p>Military Standing: [edit]</p>
+        <p>Citizens: [edit]</p>
+    </div>
+    <div class="rightside">
+        <p>Day #</p>
+    </div>
+</div>
+<div>
+    <!-- grid -->
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="SteamSpire logo" width="700" height="700">
+<br>
+<p>Welcome to SteamSpire, a city-builder game where you manage a Victorian-era Steampunk city. <br>
+    Build industrial zones to increase your steam count, build commercial zones to increase your gear count, <br>
+    and build residential zones to increase your population! <br>
+    The more citizens you have, the more gears you make with each commercial zone. Use your gears to buy more land. <br>
+    Remember, for every 10 citizens you have, 1 steam will be used each day! <br>
+    You will need a certain amount of citizens to unlock new zones. <br>
+    If you're feeling risky, you can invest in military zones, adding to your military standing. <br>
+    They will not take up steam, but will take up 10 gears per zone. <br>
+    Depending on your military standing, you have a set chance of claiming a plot of land for free if you choose to invade instead of purchase. <br>
+    Keep in mind that if you fail the chance, you will lose 1 military standing and a random military zone. <br>
+    The goal is to build the biggest and most profitable city you can in a time limit of your choosing. You will receive a grade at the end. Good luck!</p>
+<br>
+When you're ready, click the button below to start the game.
+<br>    
+<a href="{{ url_for('game') }}"><button>Start Game</button></a>
+<br>
+<br>
+{% endblock %}
