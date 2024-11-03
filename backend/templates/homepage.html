@@ -29,7 +29,7 @@
 
     <script>
         function startGame() {
-            const days = document.getElementById('days').value || 30; // Default to 30 if no input
+            const days = document.getElementById('days').value || 14; 
             window.location.href = `{{ url_for('game') }}?days=${days}`;
         }
     </script>
