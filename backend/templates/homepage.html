@@ -24,6 +24,14 @@
         <li>You can attempt to invade plots of land for free based on your military standing, but failing this incurs a loss of 1 military standing and a random military zone.</li>
     
     <br><p>When you're ready, click the button below to start the game.</p>
-    <a href="{{ url_for('game') }}"><button>Start Game</button></a>
+    <input type="number" id="days" placeholder="Days:" min='1'>
+    <button onclick="startGame()">Start Game</button>
+
+    <script>
+        function startGame() {
+            const days = document.getElementById('days').value || 30; // Default to 30 if no input
+            window.location.href = `{{ url_for('game') }}?days=${days}`;
+        }
+    </script>
 </div>
 {% endblock %}
