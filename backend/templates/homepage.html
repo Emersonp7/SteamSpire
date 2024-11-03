@@ -23,13 +23,13 @@
         <li>Invest in military zones to enhance your military standing without consuming steam. Each zone costs 10 gears.</li>
         <li>You can attempt to invade plots of land for free based on your military standing, but failing this incurs a loss of 1 military standing and a random military zone.</li>
     
-    <br><p>When you're ready, click the button below to start the game.</p>
-    <input type="number" id="days" placeholder="Days:" min='1'>
+    <br><p>After selecting the number of days to play, click the "Start Game" button</p>
+    <input type="number" id="days" placeholder="Days" min='1' max="30"><br>
     <button onclick="startGame()">Start Game</button>
 
     <script>
         function startGame() {
-            const days = document.getElementById('days').value || 14; 
+            const days = document.getElementById('days').value || 30; // Default to 30 if no input
             window.location.href = `{{ url_for('game') }}?days=${days}`;
         }
     </script>
