@@ -6,16 +6,14 @@
 
 {% block body %}
 
-<div class="playerinfo">
-    <div>
-        <p>Gears: {{ gears }}</p>
-        <p>Steam: {{ steam }}</p>
-        <p>Military Standing: {{ military }}</p>
-        <p>Citizens: {{ citizens }}</p>
-        
-    </div>
-    <div>
-        <p>Day #{{day}}</p>
+<div class="container">
+    <div class="playerinfo">
+        <div>
+            <p>Gears: {{gears}} | Steam: {{steam}} | Military Standing: {{military}} | Citizens: {{citizens}}</p>
+        </div>
+        <div>
+            <p>Day #{{day}}</p>
+        </div>
     </div>
 </div>
 <div>
