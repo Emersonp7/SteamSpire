@@ -20,23 +20,124 @@
     <!-- grid -->
     <table id="grid">
         <tr>
-            <td data-name="Z1" data-value="free">Z1</td>
-            <td data-name="Z2" data-value="free">Z2</td>
-            <td data-name="Z3" data-value="free">Z3</td>
+            <td data-name="Z1" data-value="free">Z1 
+                <div class="radio-group">
+                <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                </div>
+            </td>
+            <td data-name="Z2" data-value="free" onclick="handleSelect(this)">Z2
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
+            <td data-name="Z3" data-value="free" onclick="handleSelect(this)">Z3
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
         </tr>
+
         <tr>
-            <td data-name="Z4" data-value="free">Z4</td>
-            <td data-name="Z5" data-value="free">Z5</td>
-            <td data-name="Z6" data-value="free">Z6</td>
+            <td data-name="Z4" data-value="free" onclick="handleSelect(this)">Z4
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
+            <td data-name="Z5" data-value="free" onclick="handleSelect(this)">Z5
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
+            <td data-name="Z6" data-value="free" onclick="handleSelect(this)">Z6
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
         </tr>
         
         <tr>
-            <td data-name="Z7" data-value="free">Z7</td>
-            <td data-name="Z8" data-value="free">Z8</td>
-            <td data-name="Z9" data-value="free">Z9</td>
+            <td data-name="Z7" data-value="free" onclick="handleSelect(this)">Z7
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
+            <td data-name="Z8" data-value="free" onclick="handleSelect(this)">Z8
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
+            <td data-name="Z9" data-value="free" onclick="handleSelect(this)">Z9
+                <div class="radio-group">
+                    <label><input type="radio" name="ZoneType" value="R" onclick="send(this.parentElement.parentElement.parentElement, value)"> R</label>
+                    <label><input type="radio" name="ZoneType" value="I" onclick="send(this.parentElement.parentElement.parentElement, value)"> I</label>
+                    <label><input type="radio" name="ZoneType" value="M" onclick="send(this.parentElement.parentElement.parentElement, value)"> M</label>
+                    <label><input type="radio" name="ZoneType" value="C" onclick="send(this.parentElement.parentElement.parentElement, value)"> C</label>
+                    </div>
+            </td>
         </tr>
+        </table>
+        
+       
 
-    </table>
+        <script>
+            function send(element, selectedOption) {
+                // Retrieve data-name and data-value of the <td> element (parent)
+                const name = element.getAttribute('data-name');
+                const value = element.getAttribute('data-value');
+                
+                console.log('Clicked cell:', name, value);
+                console.log('Selected option value:', selectedOption);
+        
+                // Prepare data to send to the backend
+                const dataToSend = {
+                    name: name,
+                    value: value,
+                    selectedOption: selectedOption // Include selected option in the data
+                };
+        
+                // Send data to the Flask backend via AJAX
+                fetch('/receive-cell-data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(dataToSend),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data sent successfully:', data);
+                })
+                .catch(error => {
+                    console.error('Error sending data:', error);
+                });
+            }
+        </script>
+        
+        
 
 </div>
 {% endblock %}

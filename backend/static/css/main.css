@@ -67,7 +67,47 @@ body .playerinfo {
 
 td {
     border: 3px solid black;
-    padding: 75px;
-;
+    padding: 75px;;
     text-align: center;
+}
+td:hover {
+    background-color: white;
+    cursor: pointer;
+}
+option::after {
+    display: none;
+
+}
+td[data-value="owned"]:hover {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+input[type="radio"] {
+    width: 10px;
+    height: 30px;
+    font-size: 10px;
+    font-family: 'Cambria', sans-serif;
+    background-color: #333;
+    color: #f5f5f5;
+    border: none;
+    margin-top: 5px;
+    border-radius: 10px;    
+    cursor: pointer;
+}
+
+/* Container to arrange the radio buttons */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px; /* Adjust width to control alignment */
+}
+
+/* Styling for the labels to control positioning */
+.radio-group label {
+    width: 50%; /* Two items per row */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between radio button and label text */
+    margin-bottom: 10px; /* Space between rows */
 }
