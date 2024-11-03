@@ -86,11 +86,21 @@ CORS(app)
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/game', methods=['GET'])
+@app.route('/game')
 def game():
-    code = request.args.get("code")
-    print(f"Code: {code}")
+<<<<<<< HEAD
+    player_data = {
+        'gears': 100,
+        'steam': 5,
+        'military': 3,
+        'citizens': 50,
+        'day': 1
+    }
+    return render_template('game.html', **player_data)
+
+=======
     return render_template("game.html")
+>>>>>>> 5eca13d4557c2ac87713652c17df92c82f655f28
 
 @app.route('/story', methods=['GET'])
 def story():
