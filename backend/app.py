@@ -88,6 +88,7 @@ def homepage():
 
 @app.route('/game')
 def game():
+<<<<<<< HEAD
     player_data = {
         'gears': 100,
         'steam': 5,
@@ -97,6 +98,9 @@ def game():
     }
     return render_template('game.html', **player_data)
 
+=======
+    return render_template("game.html")
+>>>>>>> 5eca13d4557c2ac87713652c17df92c82f655f28
 
 @app.route('/story', methods=['GET'])
 def story():
