@@ -1,0 +1,25 @@
+.playerinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.grid-item {
+    background-color: lightblue;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
