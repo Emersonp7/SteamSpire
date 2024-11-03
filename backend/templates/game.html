@@ -8,34 +8,37 @@
 
 <div class="playerinfo">
     <div>
-        <p>Gears: [edit]</p>
-        <p>Steam: [edit]</p>
-        <p>Military Standing: [edit]</p>
-        <p>Citizens: [edit]</p>
+        <p>Gears: {{ gears }}</p>
+        <p>Steam: {{ steam }}</p>
+        <p>Military Standing: {{ military }}</p>
+        <p>Citizens: {{ citizens }}</p>
+        
     </div>
     <div>
-        <p>Day #</p>
+        <p>Day #{{day}}</p>
     </div>
 </div>
 <div>
     <!-- grid -->
     <table id="grid">
         <tr>
-            <td>Z1</td>
-            <td>Z2</td>
-            <td>Z3</td>
+            <td data-name="Z1" data-value="free">Z1</td>
+            <td data-name="Z2" data-value="free">Z2</td>
+            <td data-name="Z3" data-value="free">Z3</td>
         </tr>
         <tr>
-            <td>Z4</td>
-            <td>Z5</td>
-            <td>Z6</td>
+            <td data-name="Z4" data-value="free">Z4</td>
+            <td data-name="Z5" data-value="free">Z5</td>
+            <td data-name="Z6" data-value="free">Z6</td>
         </tr>
         
         <tr>
-            <td>Z7</td>
-            <td>Z8</td>
-            <td>Z9</td>
+            <td data-name="Z7" data-value="free">Z7</td>
+            <td data-name="Z8" data-value="free">Z8</td>
+            <td data-name="Z9" data-value="free">Z9</td>
         </tr>
+
     </table>
+
 </div>
 {% endblock %}
