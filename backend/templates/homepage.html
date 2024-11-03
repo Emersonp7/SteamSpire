@@ -19,19 +19,20 @@
     <p>Resource Management:</p>
         <li>For every 10 citizens, you consume 1 steam daily.</li>
         <li>Use gears to purchase additional land and unlock new zones.</li>
-    <p>Military Zones:</p>
+    <!-- <p>Military Zones:</p>
         <li>Invest in military zones to enhance your military standing without consuming steam. Each zone costs 10 gears.</li>
-        <li>You can attempt to invade plots of land for free based on your military standing, but failing this incurs a loss of 1 military standing and a random military zone.</li>
+        <li>You can attempt to invade plots of land for free based on your military standing, but failing this incurs a loss of 1 military standing and a random military zone.</li> -->
     
     <br><p>After selecting the number of days to play, click the "Start Game" button</p>
-    <input type="number" id="days" placeholder="Days" min='1' max="30"><br>
+    <input type="number" id="days" placeholder="Days" min='1' max="7"><br>
     <button onclick="startGame()">Start Game</button>
 
     <script>
         function startGame() {
-            const days = document.getElementById('days').value || 30; // Default to 30 if no input
-            window.location.href = `{{ url_for('game') }}?days=${days}`;
+            const days = document.getElementById('days').value || 7; // Default to 7 if no input
+            const gameUrl = `{{ url_for('game') }}?days=${days}`;
+            window.location.href = gameUrl;
         }
-    </script>
+    </script>    
 </div>
 {% endblock %}

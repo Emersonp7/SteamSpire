@@ -139,7 +139,7 @@ juego = None
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/game', methods=['GET'])
+@app.route('/game')
 def game():
     # Gabriel's Code
     # if request.is_json:
