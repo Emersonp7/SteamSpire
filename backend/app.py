@@ -79,8 +79,6 @@ class Game:
             self.zones += 16 # 25 - 9 zones leaves 16 zones untouched 
             self.expanded = True
 
-
-
 app = Flask(__name__)
 CORS(app)
 
