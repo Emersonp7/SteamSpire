@@ -54,15 +54,21 @@ class Game:
         return False    
 
     def addResidentialZone(self) -> None:
+        if (self.zones <= 0):
+            return
         self.zone -= 1
         self.residentZones += 1
         self.citizens += 5
         
     def addCommercialZone(self) -> None:
+        if (self.zones <= 0):
+            return
         self.zone -= 1
         self.commercialZones += 1
 
     def addIndustrialZone(self) -> None:
+        if (self.zones <= 0):
+            return
         self.zone -= 1
         self.industrialZones += 1
 
@@ -74,6 +80,7 @@ class Game:
             self.expanded = True
 
 
+
 app = Flask(__name__)
 CORS(app)
 
@@ -81,7 +88,7 @@ CORS(app)
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/game')
+@app.route('/game', methods=['GET'])
 def game():
     
     return render_template("game.html")
