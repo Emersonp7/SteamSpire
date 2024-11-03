@@ -36,7 +36,6 @@ p {
     font-size: 20px;
     color: black;
     font-family: 'Cambria', sans-serif;
-<<<<<<< HEAD
     font-weight: bold;
 }
 #grid {
@@ -48,12 +47,17 @@ p {
 td {
     border: 1px solid black;
     text-align: center;
-=======
 }
 
 li {
     font-size: 20px;
     color: black;
     font-family: 'Cambria', sans-serif;
->>>>>>> 12d30d1c3090bfa84d4a06164b488df4b6c97462
+}
+
+body .playerinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
