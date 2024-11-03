@@ -1,8 +1,23 @@
-.playerinfo {
+html {
+    background-image: url("/public/Background.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body .playerinfo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    align-items: baseline;
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 50%;
+    margin: 50px auto 0 auto;
 }
 
 .grid-container {
@@ -15,7 +30,7 @@
 }
 
 .grid-item {
-    background-color: lightblue;
+    background-color: white;
 }
 
 .button {

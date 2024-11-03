@@ -25,6 +25,34 @@ class App extends Component {
     };
   }
 
+  handleStartGame = () => {
+    fetch('http://127.0.0.1:5000/game', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Ensure this header is present
+        },
+        body: JSON.stringify({
+            // Include any data you want to send as JSON
+            // Example data:
+            exampleKey: 'exampleValue'
+        }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data); // Handle the response data
+    })
+    .catch(error => {
+        console.error('Error starting the game:', error);
+    });
+  }
+
+
+
   // Calculate cost based on plot index, making plot 5 (index 4) free
   calculateCost = (plotIndex) => {
     if (plotIndex === 4) {
@@ -135,6 +163,7 @@ class App extends Component {
           <p>Zones Owned: {this.state.zonesOwned}</p>
           <p>Day {this.state.dayCounter}/{this.state.totalDays}</p>
         </div>
+        <br></br>
 
         <div className="grid-container">
           {this.state.selectedZones.map((zone, index) => (
@@ -158,6 +187,7 @@ class App extends Component {
             </div>
           ))}
         </div>
+        <br></br>
 
         <div className="button">
           <button onClick={this.incrementDay}>End Day</button>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory, jsonify
+from flask import Flask, render_template, send_from_directory, jsonify, request
 from flask_cors import CORS
 import os
 import requests
@@ -10,9 +10,15 @@ CORS(app)
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/game')
+@app.route('/game', method=['GET'])
 def game():
-    return send_from_directory('frontend/build', 'index.html')
+    if request.is_json:
+        data = request.get_json()  # Get the JSON data
+        # Logic for starting the game goes here
+        return jsonify({"message": "Game started!", "status": "success"})
+    else:
+        return jsonify({"message": "Request must be JSON", "status": "error"}), 400
+    # return send_from_directory('frontend/build', 'index.html')
 
 @app.route('/static/<path:path>')
 def send_static(path):
