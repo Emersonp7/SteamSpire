@@ -46,3 +46,13 @@ p {
     font-family: 'Cambria', sans-serif;
     font-weight: bold;
 }
+#grid {
+    width: 20%;
+    border-collapse: collapse;
+    margin: 50px auto 0 auto; /* 50px top margin, auto left/right */
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}

@@ -90,7 +90,8 @@ def homepage():
 
 @app.route('/game', methods=['GET'])
 def game():
-    
+    code = request.args.get("code")
+    print(f"Code: {code}")
     return render_template("game.html")
 
 @app.route('/story', methods=['GET'])
