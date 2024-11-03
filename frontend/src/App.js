@@ -5,6 +5,9 @@ import Card from './Card';
 class App extends Component {
   constructor(props) {
     super(props);
+    const urlParams = new URLSearchParams(window.location.search);
+    const days = urlParams.get('days') ? parseInt(urlParams.get('days'), 10) : 7; // Default to 7 if not set
+
     this.state = {
       gears: 100,
       steam: 1,
@@ -18,6 +21,7 @@ class App extends Component {
         { title: "Residential Zone", description: "Increases population" },
         { title: "Commercial Zone", description: "Generates gears" },
       ],
+      totalDays: days,
     };
   }
 
@@ -82,7 +86,7 @@ class App extends Component {
 
   // Calculate daily resource changes
   incrementDay = () => {
-    if (this.state.dayCounter >= 7) {
+    if (this.state.dayCounter == this.state.totalDays) {
       // End game when day limit is reached
       this.calculateFinalScore();
       return;
@@ -129,7 +133,7 @@ class App extends Component {
           <p>Citizens: {this.state.citizens}</p>
           <p>Military Standing: {this.state.standing}</p>
           <p>Zones Owned: {this.state.zonesOwned}</p>
-          <p>Day {this.state.dayCounter}/7</p>
+          <p>Day {this.state.dayCounter}/{this.state.totalDays}</p>
         </div>
 
         <div className="grid-container">
