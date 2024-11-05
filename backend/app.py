@@ -139,16 +139,8 @@ juego = None
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/game')
+@app.route('/game', methods=['GET'])
 def game():
-    # Gabriel's Code
-    # if request.is_json:
-    #     data = request.get_json()  # Get the JSON data
-    #     # Logic for starting the game goes here
-    #     return jsonify({"message": "Game started!", "status": "success"})
-    # else:
-    #     return jsonify({"message": "Request must be JSON", "status": "error"}), 400
-
     global juego
     days = int(request.args.get('days', 30))
     juego = Game(days)
