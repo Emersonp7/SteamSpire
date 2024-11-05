@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Gear.png') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('serve_flask_static', path='css/main.css') }}">
         <title>SteamSpire</title>
         {% block head %} {% endblock %}
     </head>

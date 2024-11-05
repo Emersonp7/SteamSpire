@@ -86,7 +86,7 @@ class App extends Component {
 
   // Calculate daily resource changes
   incrementDay = () => {
-    if (this.state.dayCounter == this.state.totalDays) {
+    if (this.state.dayCounter === this.state.totalDays) {
       // End game when day limit is reached
       this.calculateFinalScore();
       return;
